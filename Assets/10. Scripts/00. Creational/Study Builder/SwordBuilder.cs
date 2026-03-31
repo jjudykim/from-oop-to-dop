@@ -206,7 +206,12 @@ namespace Study.OOP.Builder
         // =================
         // Options
         // =================
-        public SwordBuilder SetRandomRandomOption()
+        public SwordBuilder AddRandomOptions()
+        {
+            return this;
+        }
+
+        public SwordBuilder SetRandomOptions()
         {
             int optionsCount = Random.Range(0, 4);
             List<string> newOptions = new List<string>();
