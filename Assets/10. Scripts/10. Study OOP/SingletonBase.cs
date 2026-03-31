@@ -48,7 +48,7 @@ namespace Study.OOP
         {
             if (instance == null)
             {
-                instance = this as TagHandle;
+                instance = this as T;
                 DontDestroyOnLoad(this);
 
                 OnInitialize();
@@ -56,7 +56,7 @@ namespace Study.OOP
             }
             else if (instance != this)
             {
-                Debug.LogWarning($"[Singleton] 중복 인스턴스 감지됨 : {GameObject.name} 파괴");
+                Debug.LogWarning($"[Singleton] 중복 인스턴스 감지됨 : {gameObject.name} 파괴");
                 Destroy(gameObject);
             }
         }
